@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useCharacters } from '../../state/character';
 import { Link } from 'react-router-dom';
 import Character from './Character';
 
 const CharacterList = () => {
-  const { characters, loading } = useCharacters();
+  const [page, setPage] = useState(1);
+  const { characters, loading } = useCharacters(page);
 
   const characterElements = characters.map((character) => (
     <li key={character._id}>
@@ -15,7 +16,19 @@ const CharacterList = () => {
   ));
 
   if (loading) return <h1>Loading...</h1>;
-  return <ul>{characterElements}</ul>;
+  return (
+    <>
+      <button
+        disabled={page <= 1}
+        onClick={() => setPage((prevPage) => prevPage - 1)}
+      >
+        &lt;
+      </button>
+      {page}
+      <button onClick={() => setPage((prevPage) => prevPage + 1)}>&gt;</button>
+      <ul>{characterElements}</ul>
+    </>
+  );
 };
 
 export default CharacterList;
