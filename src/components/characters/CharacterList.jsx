@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Character from './Character';
 
 const CharacterList = () => {
-  const characters = useCharacters();
+  const { characters, loading } = useCharacters();
 
   const characterElements = characters.map((character) => (
     <li key={character._id}>
@@ -14,6 +14,7 @@ const CharacterList = () => {
     </li>
   ));
 
+  if (loading) return <h1>Loading...</h1>;
   return <ul>{characterElements}</ul>;
 };
 
