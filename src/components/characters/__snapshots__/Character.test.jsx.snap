@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Character component renders Character 1`] = `
+<DocumentFragment>
+  <h2>
+    Queen Arianna
+  </h2>
+  <p>
+    Films: ["Tangled","Tangled: Before Ever After"]
+  </p>
+  <p>
+    TV Shows: ["Once Upon a Time","Tangled: The Series"]
+  </p>
+</DocumentFragment>
+`;
