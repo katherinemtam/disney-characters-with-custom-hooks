@@ -48,8 +48,8 @@ describe('App component', () => {
 
   it('renders a list of characters on the home page', async () => {
     render(
-      <MemoryRouter>
-        <App initialEntries={['/']} />
+      <MemoryRouter initialEntries={['/']}>
+        <App />
       </MemoryRouter>
     );
 
