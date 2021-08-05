@@ -1,0 +1,16 @@
+.Header {
+  display: grid;
+  grid-template-columns: auto 5% 5% 5%;
+
+  background-color: #444444;
+  width: 100%;
+}
+
+.Header a {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  text-decoration: none;
+  color: white;
+}

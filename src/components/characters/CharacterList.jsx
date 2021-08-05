@@ -24,7 +24,7 @@ const CharacterList = () => {
       >
         &lt;
       </button>
-      {page}
+      Page {page}
       <button onClick={() => setPage((prevPage) => prevPage + 1)}>&gt;</button>
       <ul>{characterElements}</ul>
     </>
